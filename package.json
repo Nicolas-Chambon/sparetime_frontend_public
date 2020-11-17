@@ -9,9 +9,13 @@
     "format:fix": "pretty-quick --staged",
     "format:check": "prettier --config ./.prettierrc --list-different \"src/{app,environments,assets}/**/*{.ts,.js,.json,.css,.scss}\"",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "precommit": "run-s format:fix lint",
-    "prepush": "run-s build"
+    "e2e": "ng e2e"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "run-s format:fix lint",
+      "pre-push": "run-s build"
+    }
   },
   "private": true,
   "dependencies": {
