@@ -1,10 +1,10 @@
-<div class="layout" gdAreas="left right" gdColumns="repeat(2, 1fr)">
-  <div gdArea="left">
+<div class="layout" fxLayout="row">
+  <div fxFlex="60">
     <div fxFlex="column" fxFlexAlign="center" class="login-form">
       <mat-card>
         <mat-card-header class="justify-content-center">
           <mat-card-title>
-            <h1>Log in with your <span>favorite social network !</span></h1>
+            <h3 class="text-uppercase">Log in with your <span>favorite social network </span> !</h3>
           </mat-card-title>
         </mat-card-header>
         <hr />
@@ -40,28 +40,14 @@
       </mat-card>
     </div>
   </div>
-  <div gdArea="right" fxLayout="column" fxLayoutAlign="space-between stretch">
-    <div fxFlex="35" class="bg-image-1"></div>
-    <div fxFlex="30" fxLayout="column">
-      <div class="container" style="margin: 30px">
-        <div class="row">
-          <div class="col-8">
-            <h1 style="font-size: xx-large">SpareTime</h1>
-            <br />
-            <h1 style="font-size: x-large">Discover an innovative way to organise your events</h1>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <h4>
-              SpareTime est une application web ayant pour objectif de suggérer des événements à une municipalité tout
-              en se basant sur les préférences de ses concitoyens issue de leurs réseaux sociaux avec leurs accord.<br />
-              Elle peut aussi suggérer des événements pour une personne si elle le souhaite.
-            </h4>
-          </div>
-        </div>
-      </div>
+  <div fxFlex="40" class="bg-image-1">
+    <div fxLayout="column" fxLayoutAlign="center center" class="layer">
+      <h3 class="title">Sparetime</h3>
+      <h1 class="subheading">Discover an innovative way to find your <span style="color: #3f51b5">events !</span></h1>
+      <p class="description">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A dignissimos doloremque est harum in ipsam itaque
+        magni natus nostrum perferendis quia suscipit ut, voluptates! Animi aperiam beatae blanditiis inventore odit.
+      </p>
     </div>
-    <div fxFlex="35" class="bg-image-2"></div>
   </div>
 </div>
