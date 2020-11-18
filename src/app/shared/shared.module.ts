@@ -1,16 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LayoutComponent } from './layout/layout.component';
+import { MaterialModule } from "./material.module";
 
 
 
 @NgModule({
   declarations: [LayoutComponent],
-  exports: [
-    LayoutComponent
-  ],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    MaterialModule
+  ],
+  exports: [
+    LayoutComponent,
+    MaterialModule
+  ],
 })
 export class SharedModule { }
