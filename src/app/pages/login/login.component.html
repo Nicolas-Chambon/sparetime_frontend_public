@@ -17,7 +17,18 @@
           <mat-card-title>Connexion</mat-card-title>
         </mat-card-header>
         <mat-card-content fxLayout="column" fxLayoutGap="20px">
-          <button mat-flat-button color="primary">
+          <div class="middle">
+            <a class="butt" href="#">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a class="butt" href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a class="butt" href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+          <button mat-flat-button color="primary" routerLink="/dashboard">
             <span>Se connecter avec Facebook</span>
           </button>
           <button mat-flat-button color="accent">
@@ -32,10 +43,10 @@
     gdArea="right"
   >
     <div
-      fxFlex="column"
-      fxFlexAlign="center"
+      fxLayout="column"
+      fxLayoutAlign="space-around center"
     >
-        <h2>Right</h2>
+      <h2>Right</h2>
     </div>
   </div>
 </div>
