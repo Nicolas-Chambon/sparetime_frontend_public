@@ -1,5 +1,105 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
+@import '~@angular/material/theming';
+@import "palette";
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+$app-font-family: 'Lato, sans-serif';
+$app-typography: map-merge(
+    mat-typography-config(
+      $font-family: $app-font-family,
+        // Classes: .mat-display-4
+        // Usage: Large, one-off header, usually at the top of the page
+      $display-4: mat-typography-level(98px, 118px, 900, $letter-spacing: -0.05em),
+        // Classes: .mat-display-3
+        // Usage: Large, one-off header, usually at the top of the page
+      $display-3: mat-typography-level(64px, 77px, 900, $letter-spacing: -0.02em),
+        // Classes: .mat-display-2
+        // Usage: Large, one-off header, usually at the top of the page
+      $display-2: mat-typography-level(45px, 48px, 400, $letter-spacing: -0.005em),
+        // Classes: .mat-display-1
+        // Usage: Large, one-off header, usually at the top of the page
+      $display-1: mat-typography-level(34px, 40px, 400),
+        // Classes: .mat-h1, .mat-headline, .mat-headline-1
+        // Usage: Section heading corresponding to the <h1> tag
+      $headline: mat-typography-level(36px, 42px, 900),
+        // Classes: .mat-h2, .mat-title
+        // Usage: Section heading corresponding to the <h2> tag
+      $title: mat-typography-level(20px, 32px, 500),
+        // Classes: .mat-h3, .mat-subheading-2
+        // Usage: Section heading corresponding to the <h3> tag
+      $subheading-2: mat-typography-level(16px, 22px, 900, $letter-spacing: 0.2em),
+        // Classes: .mat-h4, .mat-subheading-1
+        // Usage: Section heading corresponding to the <h4> tag
+      $subheading-1: mat-typography-level(10px, 14px, 900, $letter-spacing: 0.2em),
+        // Classes: .mat-body-strong, .mat-body-2
+        // Usage: Bolder body text
+      $body-2: mat-typography-level(24px, 32px, 900),
+        // Classes: .mat-body, .mat-body-1
+        // Usage: Base body text
+      $body-1: mat-typography-level(14px, 25px, 400),
+        // Classes: .mat-small, .mat-caption
+        // Usage: Smaller body and hint text
+      $caption: mat-typography-level(12px, 22px, 400),
+        // Classes: none
+        // Usage: Buttons and anchors
+      $button: mat-typography-level(12px, 22px, 900, $letter-spacing: 0.2em),
+        // Classes: none
+        // Usage: Form input fields
+        // Line-height must be unit-less fraction of the font-size
+      $input: mat-typography-level(24px, 1.35, 400),
+    ),
+    (
+      // Classes: .mat-headline-2
+      // Usage: Section heading lighter weight
+      headline-2: mat-typography-level(28px, 42px, 400),
+      // Classes: .mat-headline-3
+      // Usage: Section heading lighter weight
+      headline-3: mat-typography-level(26px, 38px, 400),
+      // Classes: .mat-body-large, .mat-body-3
+      // Usage: Larger body text
+      body-3: mat-typography-level(24px, 32px, 400, $app-font-family, -0.05em),
+      // Classes: .mat-body-large-strong, .mat-body-4
+      // Usage: Larger and bolder body text
+      body-4: mat-typography-level(24px, 28px, 900, $app-font-family),
+      // Classes: .mat-small-4
+      // Usage: Very small and bold text
+      small-4: mat-typography-level(10px, 14px, 900, $app-font-family, $letter-spacing: 0.2em),
+      // Classes: .mat-small-3
+      // Usage: Very small text
+      small-3: mat-typography-level(10px, 14px, 400, $app-font-family, $letter-spacing: 0.2em),
+      // Classes: .mat-small-2
+      // Usage: Small and bold text
+      small-2: mat-typography-level(12px, 16px, 900, $app-font-family),
+      // Classes: .mat-small-1
+      // Usage: Small text
+      small-1: mat-typography-level(12px, 16px, 400, $app-font-family),
+      // Classes: .mat-medium-3
+      // Usage: Medium normal weight text
+      medium-3: mat-typography-level(16px, 22px, 400, $app-font-family),
+      // Classes: .mat-medium-2
+      // Usage: Medium bold text
+      medium-2: mat-typography-level(14px, 25px, 900, $app-font-family),
+      // Classes: .mat-medium-1
+      // Usage: Medium bold text
+      medium-1: mat-typography-level(16px, 22px, 900, $app-font-family)
+    )
+);
+
+/*
+ Color theme
+ */
+$app-theme-primary: mat-palette($app-pink);
+$app-theme-accent: mat-palette($app-blue);
+$app-theme-warn: mat-palette($app-grey);
+$app-theme: mat-light-theme($app-theme-primary, $app-theme-accent, $app-theme-warn);
+
+@include mat-core($app-typography);
+@include angular-material-theme($app-theme);
+
+.mat-h4,
+.mat-3 {
+  text-transform: uppercase;
+}
