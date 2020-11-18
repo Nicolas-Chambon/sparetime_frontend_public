@@ -1,4 +1,8 @@
-@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css";
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css';
+
+body {
+  font-family: 'RobotoDraft', 'Roboto', sans-serif;
+}
 
 .layout {
   min-height: 100vh;
@@ -10,42 +14,44 @@
 }
 
 .bg-image-1 {
-  background-image: url("https://www.nchambon.com/spencer-davis-naFHFLV5cqU-unsplash.jpg");
+  background-image: url('https://www.nchambon.com/spencer-davis-naFHFLV5cqU-unsplash.jpg');
   background-size: cover;
+  background-position: bottom;
 }
 
 .bg-image-2 {
-  background-image: url("https://www.nchambon.com/markus-spiske-RmvlD0oTsAo-unsplash.jpg");
+  background-image: url('https://www.nchambon.com/sheng-li-AHV8vqJIuqU-unsplash.jpg');
   background-size: cover;
+  background-position: bottom;
 }
 
-.middle{
+.middle {
   text-align: center;
 }
-.butt{
+.butt {
   text-align: center;
   display: inline-block;
   width: 90px;
   height: 90px;
-  background: #f1f1f1;
+  background: rgb(152, 152, 152);
   margin: 10px;
-  border-radius: 30%;
+  border-radius: 100%;
   box-shadow: 0 5px 15px -5px #00000070;
-  color: #3498db;
+  color: white;
   overflow: hidden;
   position: relative;
 }
-.butt i{
+.butt i {
   line-height: 90px;
   font-size: 26px;
   transition: 0.2s linear;
 }
-.butt:hover i{
+.butt:hover i {
   transform: scale(1.3);
   color: #f1f1f1;
 }
-.butt::before{
-  content: "";
+.butt::before {
+  content: '';
   position: absolute;
   width: 120%;
   height: 120%;
@@ -54,21 +60,54 @@
   left: -110%;
   top: 90%;
 }
-.butt:hover::before{
+.butt:hover::before {
   animation: aaa 0.7s 1;
   top: -10%;
   left: -10%;
 }
-@keyframes aaa {
-  0%{
-    left: -110%;
-    top: 90%;
-  }50%{
-     left: 10%;
-     top: -30%;
-   }100%{
-      top: -10%;
-      left: -10%;
-    }
+.butt.facebook {
+  //color: #3f51b5;
 }
 
+.butt.facebook::before {
+  background: #3f51b5;
+}
+
+.butt.instagram {
+}
+
+.butt.instagram::before {
+  background: #d6249f;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+}
+
+.butt.linkedin::before {
+  background: #006699;
+}
+
+.butt.reddit::before {
+  background: rgb(255, 69, 0);
+}
+
+.butt.tumblr::before {
+  background: #3a5876;
+}
+
+@keyframes aaa {
+  0% {
+    left: -110%;
+    top: 90%;
+  }
+  50% {
+    left: 10%;
+    top: -30%;
+  }
+  100% {
+    top: -10%;
+    left: -10%;
+  }
+}
+
+.mat-card {
+  font-family: 'RobotoDraft', 'Roboto', sans-serif;
+}

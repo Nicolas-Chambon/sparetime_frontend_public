@@ -1,56 +1,67 @@
-<div
-  class="layout"
-  gdAreas="left right"
-  gdColumns="repeat(2, 1fr)"
->
-  <div
-    gdArea="left"
-
-  >
-    <div
-      fxFlex="column"
-      fxFlexAlign="center"
-      class="login-form"
-    >
-      <mat-card >
+<div class="layout" gdAreas="left right" gdColumns="repeat(2, 1fr)">
+  <div gdArea="left">
+    <div fxFlex="column" fxFlexAlign="center" class="login-form">
+      <mat-card>
         <mat-card-header class="justify-content-center">
-          <mat-card-title>Connexion</mat-card-title>
+          <mat-card-title>
+            <h1>Log in with your favorite social network !</h1>
+          </mat-card-title>
         </mat-card-header>
+        <hr />
         <mat-card-content fxLayout="column" fxLayoutGap="20px">
           <div fxLayout="row" fxLayoutAlign="space-around center">
-
-            <a class="butt" href="#">
+            <a class="butt facebook" href="#">
               <i class="fab fa-facebook-f"></i>
             </a>
 
-            <a class="butt" href="#">
+            <a class="butt instagram" href="#">
               <i class="fab fa-instagram"></i>
             </a>
 
-            <a class="butt" href="#">
+            <a class="butt twitter" href="#">
               <i class="fab fa-twitter"></i>
             </a>
+          </div>
 
+          <div fxLayout="row" fxLayoutAlign="space-around center">
+            <a class="butt linkedin" href="#">
+              <i class="fab fa-linkedin"></i>
+            </a>
+
+            <a class="butt reddit" href="#">
+              <i class="fab fa-reddit"></i>
+            </a>
+
+            <a class="butt tumblr" href="#">
+              <i class="fab fa-tumblr"></i>
+            </a>
           </div>
         </mat-card-content>
       </mat-card>
     </div>
-
   </div>
-  <div
-    gdArea="right"
-    fxLayout="column"
-    fxLayoutAlign="space-between stretch"
-  >
+  <div gdArea="right" fxLayout="column" fxLayoutAlign="space-between stretch">
     <div fxFlex="35" class="bg-image-1"></div>
-    <div
-      fxFlex="30"
-      fxLayout="column"
-      fxLayoutAlign="center center"
-    >
-      Right
+    <div fxFlex="30" fxLayout="column">
+      <div class="container" style="margin: 30px">
+        <div class="row">
+          <div class="col-8">
+            <h1 style="font-size: xx-large">SpareTime</h1>
+            <br />
+            <h1 style="font-size: x-large">Discover an innovative way to organise your events</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <h4>
+              SpareTime est une application web ayant pour objectif de suggérer des événements à une municipalité tout
+              en se basant sur les préférences de ses concitoyens issue de leurs réseaux sociaux avec leurs accord.<br />
+              Elle peut aussi suggérer des événements pour une personne si elle le souhaite.
+            </h4>
+          </div>
+        </div>
+      </div>
     </div>
     <div fxFlex="35" class="bg-image-2"></div>
   </div>
 </div>
-
