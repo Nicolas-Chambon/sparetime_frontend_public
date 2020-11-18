@@ -7,6 +7,29 @@
 html,
 body {
   height: 100%;
+
+  color: #404040;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #404040;
+
+    & span {
+      background: rgb(89, 48, 135);
+      background: -webkit-linear-gradient(
+        90deg,
+        rgba(89, 48, 135, 1) 0%,
+        rgba(150, 69, 163, 1) 45%,
+        rgba(94, 43, 167, 1) 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
 }
 body {
   margin: 0;
