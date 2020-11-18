@@ -4,9 +4,32 @@ body {
   font-family: 'RobotoDraft', 'Roboto', sans-serif;
 }
 
+.title {
+  color: white;
+  text-transform: uppercase;
+}
+
+.subheading {
+  color: ghostwhite;
+  text-align: center;
+  margin: 0 30px;
+}
+
+.description {
+  color: ghostwhite;
+  margin: 0 30px;
+}
+
+.layer {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+}
+
+
 .layout {
   min-height: 100vh;
-  background: linear-gradient(90deg, #f3f7fa 50%, white 50%);
+  background: linear-gradient(90deg, #f3f7fa 30%, white 70%);
 }
 
 .login-form {
