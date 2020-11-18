@@ -2,13 +2,21 @@
 
 .layout {
   min-height: 100vh;
-  background: linear-gradient(90deg, white 50%, #f3f7fa 50%);
-  padding-bottom: 20px;
-
+  background: linear-gradient(90deg, #f3f7fa 50%, white 50%);
 }
 
 .login-form {
   padding: 0 100px;
+}
+
+.bg-image-1 {
+  background-image: url("https://www.nchambon.com/spencer-davis-naFHFLV5cqU-unsplash.jpg");
+  background-size: cover;
+}
+
+.bg-image-2 {
+  background-image: url("https://www.nchambon.com/markus-spiske-RmvlD0oTsAo-unsplash.jpg");
+  background-size: cover;
 }
 
 .middle{

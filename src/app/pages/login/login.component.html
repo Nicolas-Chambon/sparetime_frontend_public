@@ -13,27 +13,25 @@
       class="login-form"
     >
       <mat-card >
-        <mat-card-header>
+        <mat-card-header class="justify-content-center">
           <mat-card-title>Connexion</mat-card-title>
         </mat-card-header>
         <mat-card-content fxLayout="column" fxLayoutGap="20px">
-          <div class="middle">
+          <div fxLayout="row" fxLayoutAlign="space-around center">
+
             <a class="butt" href="#">
               <i class="fab fa-facebook-f"></i>
             </a>
+
             <a class="butt" href="#">
               <i class="fab fa-instagram"></i>
             </a>
+
             <a class="butt" href="#">
               <i class="fab fa-twitter"></i>
             </a>
+
           </div>
-          <button mat-flat-button color="primary" routerLink="/dashboard">
-            <span>Se connecter avec Facebook</span>
-          </button>
-          <button mat-flat-button color="accent">
-            <span>Se connecter avec Twitter</span>
-          </button>
         </mat-card-content>
       </mat-card>
     </div>
@@ -41,13 +39,18 @@
   </div>
   <div
     gdArea="right"
+    fxLayout="column"
+    fxLayoutAlign="space-between stretch"
   >
+    <div fxFlex="35" class="bg-image-1"></div>
     <div
+      fxFlex="30"
       fxLayout="column"
-      fxLayoutAlign="space-around center"
+      fxLayoutAlign="center center"
     >
-      <h2>Right</h2>
+      Right
     </div>
+    <div fxFlex="35" class="bg-image-2"></div>
   </div>
 </div>
 
