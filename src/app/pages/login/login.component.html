@@ -1,1 +1,42 @@
-<p>login works!</p>
+<div
+  class="layout"
+  gdAreas="left right"
+  gdColumns="repeat(2, 1fr)"
+>
+  <div
+    gdArea="left"
+
+  >
+    <div
+      fxFlex="column"
+      fxFlexAlign="center"
+      class="login-form"
+    >
+      <mat-card >
+        <mat-card-header>
+          <mat-card-title>Connexion</mat-card-title>
+        </mat-card-header>
+        <mat-card-content fxLayout="column" fxLayoutGap="20px">
+          <button mat-flat-button color="primary">
+            <span>Se connecter avec Facebook</span>
+          </button>
+          <button mat-flat-button color="accent">
+            <span>Se connecter avec Twitter</span>
+          </button>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+  </div>
+  <div
+    gdArea="right"
+  >
+    <div
+      fxFlex="column"
+      fxFlexAlign="center"
+    >
+        <h2>Right</h2>
+    </div>
+  </div>
+</div>
+
