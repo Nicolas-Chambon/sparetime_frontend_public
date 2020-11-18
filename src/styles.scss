@@ -120,8 +120,8 @@ $app-typography: map-merge(
 /*
  Color theme
  */
-$app-theme-primary: mat-palette($app-pink);
-$app-theme-accent: mat-palette($app-blue);
+$app-theme-primary: mat-palette($app-blue);
+$app-theme-accent: mat-palette($app-pink);
 $app-theme-warn: mat-palette($app-grey);
 $app-theme: mat-light-theme($app-theme-primary, $app-theme-accent, $app-theme-warn);
 

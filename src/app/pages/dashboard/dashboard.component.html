@@ -1,12 +1,78 @@
 <app-layout></app-layout>
 
-<div class="my-container">
-  <app-event-card
-    facebookUrl="lorem"
-    instagramUrl="lorem"
-    twitterUrl="lorem"
-    shortName="lorem"
-    shortDesc="lorem"
-    imageUrl="https://images.unsplash.com/photo-1525543907410-b2562b6796d6?ixlib=rb-0.3.5&s=9ff8e5e718a6a40cbd0e1471235912f4&auto=format&fit=crop&w=3452&q=80"
-  ></app-event-card>
-</div>
+<mat-tab-group>
+
+  <!--Tab for the top event-->
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon class="tab-icon">star</mat-icon>
+      Your perfect event
+    </ng-template>
+    <div class="container top-event-container">
+      <h1> Your perfect Event</h1>
+    </div>
+  </mat-tab>
+
+  <!-- Tab for the top trends-->
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon class="tab-icon">trending_up</mat-icon>
+      Trending events
+    </ng-template>
+    <div fxLayout="row">
+      <div fxFlex="50" fxLayout="column" fxLayoutAlign="center center">
+        <app-event-card
+          facebookUrl="lorem"
+          instagramUrl="lorem"
+          twitterUrl="lorem"
+          shortName="lorem"
+          shortDesc="lorem"
+          imageUrl="https://images.unsplash.com/photo-1525543907410-b2562b6796d6?ixlib=rb-0.3.5&s=9ff8e5e718a6a40cbd0e1471235912f4&auto=format&fit=crop&w=3452&q=80"
+        ></app-event-card>
+        <app-event-card
+          facebookUrl="lorem"
+          instagramUrl="lorem"
+          twitterUrl="lorem"
+          shortName="lorem"
+          shortDesc="lorem"
+          imageUrl="https://images.unsplash.com/photo-1525543907410-b2562b6796d6?ixlib=rb-0.3.5&s=9ff8e5e718a6a40cbd0e1471235912f4&auto=format&fit=crop&w=3452&q=80"
+        ></app-event-card>
+        <app-event-card
+          facebookUrl="lorem"
+          instagramUrl="lorem"
+          twitterUrl="lorem"
+          shortName="lorem"
+          shortDesc="lorem"
+          imageUrl="https://images.unsplash.com/photo-1525543907410-b2562b6796d6?ixlib=rb-0.3.5&s=9ff8e5e718a6a40cbd0e1471235912f4&auto=format&fit=crop&w=3452&q=80"
+        ></app-event-card>
+      </div>
+      <div fxFlex="50" fxLayout="column" fxLayoutAlign="center center">
+        <app-event-card
+          facebookUrl="lorem"
+          instagramUrl="lorem"
+          twitterUrl="lorem"
+          shortName="lorem"
+          shortDesc="lorem"
+          imageUrl="https://images.unsplash.com/photo-1525543907410-b2562b6796d6?ixlib=rb-0.3.5&s=9ff8e5e718a6a40cbd0e1471235912f4&auto=format&fit=crop&w=3452&q=80"
+        ></app-event-card>
+        <app-event-card
+          facebookUrl="lorem"
+          instagramUrl="lorem"
+          twitterUrl="lorem"
+          shortName="lorem"
+          shortDesc="lorem"
+          imageUrl="https://images.unsplash.com/photo-1525543907410-b2562b6796d6?ixlib=rb-0.3.5&s=9ff8e5e718a6a40cbd0e1471235912f4&auto=format&fit=crop&w=3452&q=80"
+        ></app-event-card>
+        <app-event-card
+          facebookUrl="lorem"
+          instagramUrl="lorem"
+          twitterUrl="lorem"
+          shortName="lorem"
+          shortDesc="lorem"
+          imageUrl="https://images.unsplash.com/photo-1525543907410-b2562b6796d6?ixlib=rb-0.3.5&s=9ff8e5e718a6a40cbd0e1471235912f4&auto=format&fit=crop&w=3452&q=80"
+        ></app-event-card>
+      </div>
+      </div>
+  </mat-tab>
+
+</mat-tab-group>

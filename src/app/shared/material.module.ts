@@ -26,6 +26,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatTableModule } from '@angular/material/table';
 import { PortalModule } from '@angular/cdk/portal';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatTabsModule } from "@angular/material/tabs";
 
 const MATERIAL = [
   MatSnackBarModule,
@@ -50,6 +51,7 @@ const MATERIAL = [
   MatCardModule,
   MatChipsModule,
   MatTableModule,
+  MatTabsModule,
   PortalModule,
   MatProgressBarModule,
 ];
