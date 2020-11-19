@@ -14,6 +14,10 @@ export class DashboardComponent implements OnInit {
   trendingEvents$: Observable<any>;
   userEvent$: Observable<any>;
 
+  userEvent: any;
+
+  userEventLoaded: boolean;
+
   slides = [
     { image: 'https://farm9.staticflickr.com/8059/28286750501_dcc27b1332_h_d.jpg' },
     { image: 'https://farm6.staticflickr.com/5812/23394215774_b76cd33a87_h_d.jpg' },
@@ -34,5 +38,12 @@ export class DashboardComponent implements OnInit {
     }
     this.userEvent$ = this.eventsService.userEvent().pipe(first());
     this.trendingEvents$ = this.eventsService.trendingEvents().pipe(first());
+
+    this.userEvent$.subscribe((data: any) => {
+      this.userEvent = data;
+      this.slides.push({ image: '' });
+      this.userEventLoaded = true;
+      console.log(this.userEvent);
+    });
   }
 }
