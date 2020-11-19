@@ -35,7 +35,7 @@ body {
   margin: 0;
 }
 
-$app-font-family: 'Lato, sans-serif';
+$app-font-family: 'Roboto, sans-serif';
 $app-typography: map-merge(
   mat-typography-config(
     $font-family: $app-font-family,
