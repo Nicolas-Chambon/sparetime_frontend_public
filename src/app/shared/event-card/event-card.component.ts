@@ -32,32 +32,14 @@ export class EventCardComponent implements OnInit {
   ngOnInit(): void {}
 
   onSelectEvent() {
-    console.log(this.event);
-
     this.dialog.open(EventModalComponent, {
-      maxWidth: '50%',
-      maxHeight: '50%',
-      width: '50%',
-      height: '50%',
+      maxWidth: '600px',
+      maxHeight: '90%',
+      width: '90%',
       data: {
-        adress: this.dateEvent,
-        shortName: this.shortName,
         event: this.event,
       },
+      panelClass: 'event-card-dialog-container',
     });
-
-    // this.selectedEvent = event;
-    // this.dialog.open(eventDialogComponent, {
-    //   maxWidth:'50%',
-    //   maxHeight:'50%',
-    //   width:'50%',
-    //   height:'50%',
-    //   data:{
-    //     'event' : this.selectedEvent
-    //   },
-    // })
-    //  Donc ça c'est pour lancer la modal
-    //  Tu créer le composant de la modal à l'interrieur de celui la, et dans les parametre du constructeur tu met ça
-    //  @Inject(MAT_DIALOG_DATA) public data: any
   }
 }

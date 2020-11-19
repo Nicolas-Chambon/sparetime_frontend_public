@@ -9,7 +9,9 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 export class EventModalComponent implements OnInit {
   constructor(public dialogRef: MatDialogRef<EventModalComponent>, @Inject(MAT_DIALOG_DATA) public data: any) {}
 
-  ngOnInit(): void {
-    console.log(this.data.event);
+  onCloseClick(): void {
+    this.dialogRef.close();
   }
+
+  ngOnInit(): void {}
 }

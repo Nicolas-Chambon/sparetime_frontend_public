@@ -1,0 +1,28 @@
+.close-event-modal {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.image-event-modal {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+}
+
+.event-modal-content {
+  padding: 1rem;
+
+  & .event-modal-informations {
+    & i {
+      width: 1.5rem;
+    }
+  }
+}

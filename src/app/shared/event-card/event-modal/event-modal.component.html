@@ -1,1 +1,55 @@
-<p>event-modal works!</p>
+<div style="position: relative">
+  <span class="close-event-modal" (click)="onCloseClick()">X</span>
+
+  <img class="image-event-modal" src="{{ data.event.picture1 }}" />
+  <div class="event-modal-content">
+    <h3 class="text-center">{{ data.event.title }}</h3>
+
+    <div style="margin-bottom: 1rem">
+      {{ data.event.description }}
+    </div>
+    <div class="row event-modal-informations">
+      <div class="col-6">
+        <div class="row">
+          <div class="col">
+            <i class="fas fa-map-marker-alt"></i>
+            <a href="#">
+              <span class="text-uppercase">
+                {{ data.event.location }}
+              </span>
+              {{ data.event.address }}, {{ data.event.zipcode }} {{ data.event.city }}
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <i class="fas fa-calendar-alt"></i>
+            {{ data.event.date }}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <i class="fas fa-hourglass-half"></i>
+            {{ data.event.duration }}
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="row">
+          <div class="col">
+            <i class="fas fa-money-bill-wave-alt"></i>
+            {{ data.event.price }} $
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <i class="fas fa-globe"></i>
+            <a href="#">Booking link</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

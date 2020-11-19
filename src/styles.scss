@@ -132,3 +132,9 @@ $app-theme: mat-light-theme($app-theme-primary, $app-theme-accent, $app-theme-wa
 .mat-3 {
   text-transform: uppercase;
 }
+
+.event-card-dialog-container {
+  .mat-dialog-container {
+    padding: 0 !important;
+  }
+}

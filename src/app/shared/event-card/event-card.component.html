@@ -1,12 +1,12 @@
 <div class="my-card">
-  <h2>{{ shortName }}</h2>
+  <h2>{{ event.label }}</h2>
   <i class="fas fa-arrow-right"></i>
   <p>
-    {{ date }}
+    {{ event.date }}
     <br />
-    <b>{{ companyName }}</b>
+    <b>{{ event.company_name }}</b>
   </p>
-  <img alt="image-activity" class="my-pic" src="{{ imageUrl }}" />
+  <img alt="image-activity" class="my-pic" src="{{ event.picture1 }}" />
   <ul class="dots-container">
     <li></li>
     <li></li>
@@ -33,9 +33,9 @@
     <li></li>
   </ul>
   <div class="my-social">
-    <i *ngIf="facebookUrl" class="fab fa-facebook-f"></i>
-    <i *ngIf="twitterUrl" class="fab fa-twitter"></i>
-    <i *ngIf="instagramUrl" class="fab fa-instagram"></i>
+    <i *ngIf="event.facebookUrl" class="fab fa-facebook-f"></i>
+    <i *ngIf="event.twitterUrl" class="fab fa-twitter"></i>
+    <i *ngIf="event.instagramUrl" class="fab fa-instagram"></i>
   </div>
   <button (click)="onSelectEvent()"></button>
 </div>
