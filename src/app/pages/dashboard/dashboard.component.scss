@@ -32,24 +32,12 @@ app-event-card {
     margin-bottom: 1rem;
 
     & .my_perfect_event__body__info_container {
-      border: solid 1px pink;
-      border-radius: 10px;
-      padding: 1rem;
-      box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.26);
-
       & ul {
         padding-left: 0;
         list-style: none;
         & li {
         }
       }
-    }
-
-    & .my_perfect_event__body__desc_container {
-      border: solid 1px pink;
-      border-radius: 10px;
-      padding: 1rem;
-      box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.26);
     }
   }
 }
