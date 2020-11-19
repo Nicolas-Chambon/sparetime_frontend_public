@@ -2,6 +2,9 @@ $bg-color: #e6e5e1;
 $shdow-gray: #d3d3d5;
 $orange: #da4d1d;
 $blue: #2b26c3;
+$pink: #cb2bc9;
+$green: #2dbd1d;
+$purple: #aa9400;
 
 i {
   opacity: 0;
@@ -173,6 +176,22 @@ h2 {
     i {
       font-size: 3rem;
     }
+  }
+
+  button.type-nature {
+    background-color: $green;
+  }
+
+  button.type-sport {
+    background-color: $blue;
+  }
+
+  button.type-concert {
+    background-color: $purple;
+  }
+
+  button.type-health {
+    background-color: $pink;
   }
 
   &:hover button {
