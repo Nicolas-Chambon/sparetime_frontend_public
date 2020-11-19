@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from "../../core/services/authentication.service";
 import { Router } from "@angular/router";
 import { EventsService } from "../../core/services/events.service";
+import { Observable } from "rxjs";
+import { first } from "rxjs/operators";
 
 @Component({
   selector: 'app-dashboard',
@@ -9,6 +11,9 @@ import { EventsService } from "../../core/services/events.service";
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+
+  trendingEvents$: Observable<any>;
+  userEvent$: Observable<any>;
 
   constructor(
     private authService: AuthenticationService,
@@ -20,7 +25,8 @@ export class DashboardComponent implements OnInit {
     if (!this.authService.isAuthenticated()) {
       await this.router.navigate(['/login']);
     }
-    this.eventsService.trendingEvents().subscribe(data => console.log(data));
+    this.userEvent$ = this.eventsService.userEvent().pipe(first());
+    this.trendingEvents$ = this.eventsService.trendingEvents().pipe(first());
   }
 
 }

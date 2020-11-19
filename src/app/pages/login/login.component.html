@@ -4,14 +4,17 @@
       <mat-card>
         <mat-card-header class="justify-content-center">
           <mat-card-title>
-            <h1>Log in <span>Sparetime</span></h1>
-            <h3>Choose your favorite social network 😀</h3>
+            <h1 class="text-center">Log in <span>Sparetime</span></h1>
+            <h3 class="text-uppercase">
+              Choose your favorite social network
+              <mat-icon class="large-icon" svgIcon="horns-sign"></mat-icon>
+            </h3>
           </mat-card-title>
         </mat-card-header>
         <hr />
         <mat-card-content fxLayout="column" fxLayoutGap="50px">
           <div fxLayout="row" fxLayoutAlign="space-evenly center">
-            <a class="butt facebook" href="#">
+            <a class="butt facebook" (click)="loginFacebook()">
               <i class="fab fa-facebook-f"></i>
             </a>
 

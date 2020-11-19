@@ -5,7 +5,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
+import { MatIconModule, MatIconRegistry } from "@angular/material/icon";
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
@@ -27,6 +27,7 @@ import { MatTableModule } from '@angular/material/table';
 import { PortalModule } from '@angular/cdk/portal';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatTabsModule } from "@angular/material/tabs";
+import { DomSanitizer } from "@angular/platform-browser";
 
 const MATERIAL = [
   MatSnackBarModule,
@@ -62,5 +63,12 @@ const MATERIAL = [
   exports: MATERIAL,
 })
 export class MaterialModule {
-  constructor() { }
+  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
+    iconRegistry.addSvgIcon(
+      'partying-face',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/partying-face.svg'));
+    iconRegistry.addSvgIcon(
+      'horns-sign',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/horns-sign.svg'));
+  }
 }
