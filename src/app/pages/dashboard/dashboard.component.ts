@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenticationService } from "../../core/services/authentication.service";
+import { Router } from "@angular/router";
+import { EventsService } from "../../core/services/events.service";
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private authService: AuthenticationService,
+    private eventsService: EventsService,
+    private router: Router
+  ) { }
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
+    if (!this.authService.isAuthenticated()) {
+      await this.router.navigate(['/login']);
+    }
+    this.eventsService.trendingEvents().subscribe(data => console.log(data));
   }
 
 }

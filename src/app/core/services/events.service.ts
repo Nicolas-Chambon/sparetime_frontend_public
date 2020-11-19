@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 import { Observable, of } from "rxjs";
 import { catchError } from "rxjs/operators";
+import { LocalStorageService } from "./local-storage.service";
 
 @Injectable({
   providedIn: 'root'
 })
 export class EventsService {
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient, private localStorage: LocalStorageService) { }
 
   private static handleError(error: HttpErrorResponse): Observable<any> {
     let errorMessage;
@@ -22,17 +23,18 @@ export class EventsService {
     return of(errorMessage);
   }
 
-  userEvent(id: number, location: string): Observable<any> {
-    return this.httpClient.post(`http://www.workshop.tsukiru.com/eventUser/${ id }`, {
-      location,
+  userEvent(): Observable<any> {
+    return this.httpClient.post(`http://www.workshop.tsukiru.com/eventUser/
+    ${ this.localStorage.getItem('user-id') }`, {
+      location: this.localStorage.getItem('location'),
     }).pipe(catchError(EventsService.handleError));
   }
 
-  trendingEvents(location: string): Observable<any> {
+  trendingEvents(): Observable<any> {
     return this.httpClient.post(
       "http://www.workshop.tsukiru.com/events",
       {
-      location,
+      location: this.localStorage.getItem('location'),
       }).pipe(catchError(EventsService.handleError));
   }
 }
