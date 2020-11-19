@@ -2,11 +2,8 @@
   margin-right: 8px;
 }
 
-.container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-top: 2rem;
+.mat-card {
+  margin: 1em;
 }
 
 app-event-card {
@@ -40,4 +37,82 @@ app-event-card {
       }
     }
   }
+}
+
+//SOCIAL MEDIA BUTTONS
+.butt {
+  text-align: center;
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  background: rgb(152, 152, 152);
+  margin: 10px;
+  border-radius: 100%;
+  box-shadow: 0 5px 15px -5px #00000070;
+  color: white;
+  overflow: hidden;
+  position: relative;
+}
+.butt i {
+  line-height: 45px;
+  font-size: 26px;
+  transition: 0.4s linear;
+}
+.butt:hover i {
+  transform: scale(1.6) rotate(360deg);
+  //transform: rotate(180deg);
+  color: #f1f1f1;
+}
+.butt::before {
+  content: '';
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+.butt:hover::before {
+  animation: aaa 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+.butt.facebook {
+  //color: #3f51b5;
+}
+
+.butt.facebook {
+  background: #3f51b5;
+}
+
+.butt.instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+}
+
+.butt.twitter {
+  background: #1da1f2;
+}
+
+.butt.pinterest {
+  background: #e60023;
+}
+
+.butt.linkedin {
+  background: #006699;
+}
+
+.butt.youtube {
+  background: #ff0000;
+}
+
+.butt.reddit {
+  background: rgb(255, 69, 0);
+}
+
+.butt.tumblr {
+  background: #3a5876;
+}
+
+.butt.tiktok {
+  background: black;
 }
