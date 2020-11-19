@@ -8,6 +8,7 @@ import { SharedModule } from '../shared/shared.module';
 import { CoreModule } from '../core/core.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ExtendedModule, FlexModule, GridModule } from '@angular/flex-layout';
+import { MatCarouselModule } from '@ngmodule/material-carousel';
 
 @NgModule({
   declarations: [LoginComponent, DashboardComponent],
@@ -15,6 +16,7 @@ import { ExtendedModule, FlexModule, GridModule } from '@angular/flex-layout';
     CommonModule,
     CoreModule,
     SharedModule,
+    MatCarouselModule.forRoot(),
 
     FlexModule,
     GridModule,
