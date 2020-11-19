@@ -37,5 +37,5 @@
     <i *ngIf="event.twitterUrl" class="fab fa-twitter"></i>
     <i *ngIf="event.instagramUrl" class="fab fa-instagram"></i>
   </div>
-  <button class="type-{{ type }}" (click)="onSelectEvent()"></button>
+  <button class="type-{{ event.type }}" (click)="onSelectEvent()"></button>
 </div>
