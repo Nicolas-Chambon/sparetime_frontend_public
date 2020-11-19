@@ -35,6 +35,61 @@
         </div>
       </div>
       <div class="row">
+        <div class="container">
+          <div class="wrapper">
+            <input checked type="radio" name="slider" id="slide1" />
+            <input type="radio" name="slider" id="slide2" />
+            <input type="radio" name="slider" id="slide3" />
+            <input type="radio" name="slider" id="slide4" />
+            <input type="radio" name="slider" id="slide5" />
+
+            <div class="slider-wrapper">
+              <div class="inner">
+                <article>
+                  <img src="https://farm9.staticflickr.com/8059/28286750501_dcc27b1332_h_d.jpg" />
+                </article>
+
+                <article>
+                  <img src="https://farm6.staticflickr.com/5812/23394215774_b76cd33a87_h_d.jpg" />
+                </article>
+
+                <article>
+                  <img src="https://farm8.staticflickr.com/7455/27879053992_ef3f41c4a0_h_d.jpg" />
+                </article>
+
+                <article>
+                  <img src="https://farm8.staticflickr.com/7367/27980898905_72d106e501_h_d.jpg" />
+                </article>
+
+                <article>
+                  <img src="https://farm8.staticflickr.com/7356/27980899895_9b6c394fec_h_d.jpg" />
+                </article>
+              </div>
+              <!-- .inner -->
+            </div>
+            <!-- .slider-wrapper -->
+
+            <div class="slider-prev-next-control">
+              <label for="slide1"></label>
+              <label for="slide2"></label>
+              <label for="slide3"></label>
+              <label for="slide4"></label>
+              <label for="slide5"></label>
+            </div>
+            <!-- .slider-prev-next-control -->
+
+            <div class="slider-dot-control">
+              <label for="slide1"></label>
+              <label for="slide2"></label>
+              <label for="slide3"></label>
+              <label for="slide4"></label>
+              <label for="slide5"></label>
+            </div>
+            <!-- .slider-dot-control -->
+          </div>
+        </div>
+      </div>
+      <div class="row">
         <div class="col-4">
           <mat-card class="mat-elevation-z5">
             <mat-card-subtitle style="font-size: x-large">Informations</mat-card-subtitle>
@@ -50,10 +105,15 @@
                   <div class="col">
                     <i class="fas fa-map-marker-alt"></i>
                     <a href="#">
-                      <span class="text-uppercase" style="margin-left: 10px">Sud de France Arena</span>, Route de la
-                      Foire, 34470 Pérols
+                      <span class="text-uppercase">Sud de France Arena</span>, Route de la Foire, 34470 Pérols
                     </a>
                   </div>
+                </div>
+                <div class="row">
+                  <div class="col"><i class="fas fa-calendar-alt"></i> 21 Juin 2021</div>
+                </div>
+                <div class="row">
+                  <div class="col"><i class="fas fa-hourglass-half"></i> 2h30</div>
                 </div>
               </div>
             </mat-card-content>
@@ -78,13 +138,13 @@
             <mat-card-subtitle style="font-size: x-large">Réservation</mat-card-subtitle>
             <div class="contaienr-fluid">
               <div class="row">
-                <div class="col text-uppercase">
-                  <h2>The rolling stones</h2>
-                </div>
+                <div class="col"><i class="fas fa-money-bill-wave-alt"></i> 30 - 70 $</div>
               </div>
+
               <div class="row">
                 <div class="col">
-                  <i class="fas fa-map-marker-alt"></i>
+                  <i class="fas fa-globe"></i>
+                  <a href="#">Lien de réservation</a>
                 </div>
               </div>
             </div>
@@ -92,36 +152,6 @@
         </div>
       </div>
     </div>
-
-    <!--      <div class="container my_perfect_event__body">-->
-    <!--        <div class="row">-->
-    <!--          <div class="col-3">-->
-    <!--            <mat-card class="my_perfect_event__body__info_container">-->
-    <!--              <ul>-->
-    <!--                <li>name:</li>-->
-    <!--                <li>date:</li>-->
-    <!--                <li>addr:</li>-->
-    <!--              </ul>-->
-    <!--            </mat-card>-->
-    <!--          </div>-->
-    <!--          <div class="col-9">-->
-    <!--            <mat-card class="my_perfect_event__body__desc_container">-->
-    <!--              <div>-->
-    <!--                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi atque consequatur cum delectus eius,-->
-    <!--                enim error excepturi fugit labore magni perspiciatis placeat provident quasi quidem ratione suscipit-->
-    <!--                unde, vero.-->
-    <!--              </div>-->
-    <!--              <div>-->
-    <!--                Fugit ipsum nesciunt odio pariatur temporibus, vel. Accusamus aliquam consequatur debitis magnam neque-->
-    <!--                sit! Harum non odio quasi quo sapiente voluptates voluptatibus? Atque aut dolorum, facilis fugiat harum-->
-    <!--                nemo quia.-->
-    <!--              </div>-->
-    <!--            </mat-card>-->
-    <!--          </div>-->
-    <!--        </div>-->
-    <!--      </div>-->
-
-    <!--    </div>-->
   </mat-tab>
 
   <!-- Tab for the top trends-->
@@ -131,70 +161,118 @@
       Trending events
     </ng-template>
     <div class="container">
-      <app-event-card
-        facebookUrl="lorem"
-        instagramUrl="lorem"
-        twitterUrl="lorem"
-        shortName="lorem"
-        shortDesc="lorem"
-        imageUrl="https://images.unsplash.com/photo-1525543907410-b2562b6796d6?ixlib=rb-0.3.5&s=9ff8e5e718a6a40cbd0e1471235912f4&auto=format&fit=crop&w=3452&q=80"
-      ></app-event-card>
-      <app-event-card
-        facebookUrl="lorem"
-        instagramUrl="lorem"
-        twitterUrl="lorem"
-        shortName="lorem"
-        shortDesc="lorem"
-        imageUrl="https://images.unsplash.com/photo-1525543907410-b2562b6796d6?ixlib=rb-0.3.5&s=9ff8e5e718a6a40cbd0e1471235912f4&auto=format&fit=crop&w=3452&q=80"
-      ></app-event-card>
-      <app-event-card
-        facebookUrl="lorem"
-        instagramUrl="lorem"
-        twitterUrl="lorem"
-        shortName="lorem"
-        shortDesc="lorem"
-        imageUrl="https://images.unsplash.com/photo-1525543907410-b2562b6796d6?ixlib=rb-0.3.5&s=9ff8e5e718a6a40cbd0e1471235912f4&auto=format&fit=crop&w=3452&q=80"
-      ></app-event-card>
-      <app-event-card
-        facebookUrl="lorem"
-        instagramUrl="lorem"
-        twitterUrl="lorem"
-        shortName="lorem"
-        shortDesc="lorem"
-        imageUrl="https://images.unsplash.com/photo-1525543907410-b2562b6796d6?ixlib=rb-0.3.5&s=9ff8e5e718a6a40cbd0e1471235912f4&auto=format&fit=crop&w=3452&q=80"
-      ></app-event-card>
-      <app-event-card
-        facebookUrl="lorem"
-        instagramUrl="lorem"
-        twitterUrl="lorem"
-        shortName="lorem"
-        shortDesc="lorem"
-        imageUrl="https://images.unsplash.com/photo-1525543907410-b2562b6796d6?ixlib=rb-0.3.5&s=9ff8e5e718a6a40cbd0e1471235912f4&auto=format&fit=crop&w=3452&q=80"
-      ></app-event-card>
-      <app-event-card
-        facebookUrl="lorem"
-        instagramUrl="lorem"
-        twitterUrl="lorem"
-        shortName="lorem"
-        shortDesc="lorem"
-        imageUrl="https://images.unsplash.com/photo-1525543907410-b2562b6796d6?ixlib=rb-0.3.5&s=9ff8e5e718a6a40cbd0e1471235912f4&auto=format&fit=crop&w=3452&q=80"
-      ></app-event-card>
-      <app-event-card
-        facebookUrl="lorem"
-        instagramUrl="lorem"
-        twitterUrl="lorem"
-        shortName="lorem"
-        shortDesc="lorem"
-        imageUrl="https://images.unsplash.com/photo-1525543907410-b2562b6796d6?ixlib=rb-0.3.5&s=9ff8e5e718a6a40cbd0e1471235912f4&auto=format&fit=crop&w=3452&q=80"
-      ></app-event-card>
-      <app-event-card
-        facebookUrl="lorem"
-        instagramUrl="lorem"
-        twitterUrl="lorem"
-        shortName="lorem"
-        shortDesc="lorem"
-        imageUrl="https://images.unsplash.com/photo-1525543907410-b2562b6796d6?ixlib=rb-0.3.5&s=9ff8e5e718a6a40cbd0e1471235912f4&auto=format&fit=crop&w=3452&q=80"
-      ></app-event-card>
+      <div class="row">
+        <div class="col-6">
+          <app-event-card
+            facebookUrl="lorem"
+            instagramUrl="lorem"
+            twitterUrl="lorem"
+            shortName="lorem"
+            shortDesc="lorem"
+            imageUrl="https://images.unsplash.com/photo-1525543907410-b2562b6796d6?ixlib=rb-0.3.5&s=9ff8e5e718a6a40cbd0e1471235912f4&auto=format&fit=crop&w=3452&q=80"
+          ></app-event-card>
+        </div>
+        <div class="col-6">
+          <app-event-card
+            facebookUrl="lorem"
+            instagramUrl="lorem"
+            twitterUrl="lorem"
+            shortName="lorem"
+            shortDesc="lorem"
+            imageUrl="https://images.unsplash.com/photo-1525543907410-b2562b6796d6?ixlib=rb-0.3.5&s=9ff8e5e718a6a40cbd0e1471235912f4&auto=format&fit=crop&w=3452&q=80"
+          ></app-event-card>
+        </div>
+        <div class="col-6">
+          <app-event-card
+            facebookUrl="lorem"
+            instagramUrl="lorem"
+            twitterUrl="lorem"
+            shortName="lorem"
+            shortDesc="lorem"
+            imageUrl="https://images.unsplash.com/photo-1525543907410-b2562b6796d6?ixlib=rb-0.3.5&s=9ff8e5e718a6a40cbd0e1471235912f4&auto=format&fit=crop&w=3452&q=80"
+          ></app-event-card>
+        </div>
+        <div class="col-6">
+          <app-event-card
+            facebookUrl="lorem"
+            instagramUrl="lorem"
+            twitterUrl="lorem"
+            shortName="lorem"
+            shortDesc="lorem"
+            imageUrl="https://images.unsplash.com/photo-1525543907410-b2562b6796d6?ixlib=rb-0.3.5&s=9ff8e5e718a6a40cbd0e1471235912f4&auto=format&fit=crop&w=3452&q=80"
+          ></app-event-card>
+        </div>
+        <div class="col-6">
+          <app-event-card
+            facebookUrl="lorem"
+            instagramUrl="lorem"
+            twitterUrl="lorem"
+            shortName="lorem"
+            shortDesc="lorem"
+            imageUrl="https://images.unsplash.com/photo-1525543907410-b2562b6796d6?ixlib=rb-0.3.5&s=9ff8e5e718a6a40cbd0e1471235912f4&auto=format&fit=crop&w=3452&q=80"
+          ></app-event-card>
+        </div>
+        <div class="col-6">
+          <app-event-card
+            facebookUrl="lorem"
+            instagramUrl="lorem"
+            twitterUrl="lorem"
+            shortName="lorem"
+            shortDesc="lorem"
+            imageUrl="https://images.unsplash.com/photo-1525543907410-b2562b6796d6?ixlib=rb-0.3.5&s=9ff8e5e718a6a40cbd0e1471235912f4&auto=format&fit=crop&w=3452&q=80"
+          ></app-event-card>
+        </div>
+        <div class="col-6">
+          <app-event-card
+            facebookUrl="lorem"
+            instagramUrl="lorem"
+            twitterUrl="lorem"
+            shortName="lorem"
+            shortDesc="lorem"
+            imageUrl="https://images.unsplash.com/photo-1525543907410-b2562b6796d6?ixlib=rb-0.3.5&s=9ff8e5e718a6a40cbd0e1471235912f4&auto=format&fit=crop&w=3452&q=80"
+          ></app-event-card>
+        </div>
+        <div class="col-6">
+          <app-event-card
+            facebookUrl="lorem"
+            instagramUrl="lorem"
+            twitterUrl="lorem"
+            shortName="lorem"
+            shortDesc="lorem"
+            imageUrl="https://images.unsplash.com/photo-1525543907410-b2562b6796d6?ixlib=rb-0.3.5&s=9ff8e5e718a6a40cbd0e1471235912f4&auto=format&fit=crop&w=3452&q=80"
+          ></app-event-card>
+        </div>
+        <div class="col-6">
+          <app-event-card
+            facebookUrl="lorem"
+            instagramUrl="lorem"
+            twitterUrl="lorem"
+            shortName="lorem"
+            shortDesc="lorem"
+            imageUrl="https://images.unsplash.com/photo-1525543907410-b2562b6796d6?ixlib=rb-0.3.5&s=9ff8e5e718a6a40cbd0e1471235912f4&auto=format&fit=crop&w=3452&q=80"
+          ></app-event-card>
+        </div>
+        <div class="col-6">
+          <app-event-card
+            facebookUrl="lorem"
+            instagramUrl="lorem"
+            twitterUrl="lorem"
+            shortName="lorem"
+            shortDesc="lorem"
+            imageUrl="https://images.unsplash.com/photo-1525543907410-b2562b6796d6?ixlib=rb-0.3.5&s=9ff8e5e718a6a40cbd0e1471235912f4&auto=format&fit=crop&w=3452&q=80"
+          ></app-event-card>
+        </div>
+        <div class="col-6">
+          <app-event-card
+            facebookUrl="lorem"
+            instagramUrl="lorem"
+            twitterUrl="lorem"
+            shortName="lorem"
+            shortDesc="lorem"
+            imageUrl="https://images.unsplash.com/photo-1525543907410-b2562b6796d6?ixlib=rb-0.3.5&s=9ff8e5e718a6a40cbd0e1471235912f4&auto=format&fit=crop&w=3452&q=80"
+          ></app-event-card>
+        </div>
+      </div>
     </div>
   </mat-tab>
 </mat-tab-group>
