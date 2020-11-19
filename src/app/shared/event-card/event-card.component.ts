@@ -16,7 +16,25 @@ export class EventCardComponent implements OnInit {
   @Input() twitterUrl: string;
   @Input() instagramUrl: string;
 
+  event: any[] = [];
+
   constructor() {}
 
   ngOnInit(): void {}
+
+  onSelectEvent() {
+    // this.selectedEvent = event;
+    // this.dialog.open(eventDialogComponent, {
+    //   maxWidth:'50%',
+    //   maxHeight:'50%',
+    //   width:'50%',
+    //   height:'50%',
+    //   data:{
+    //     'event' : this.selectedEvent
+    //   },
+    // })
+    //  Donc ça c'est pour lancer la modal
+    //  Tu créer le composant de la modal à l'interrieur de celui la, et dans les parametre du constructeur tu met ça
+    //  @Inject(MAT_DIALOG_DATA) public data: any
+  }
 }
