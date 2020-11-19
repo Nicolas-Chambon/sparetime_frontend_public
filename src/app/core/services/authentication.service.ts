@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 import { Observable, of } from "rxjs";
-import { catchError } from "rxjs/operators";
+import { catchError, map, tap } from "rxjs/operators";
+import { LocalStorageService } from "./local-storage.service";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationService {
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient, private localStorage: LocalStorageService) {}
 
   private static handleError(error: HttpErrorResponse): Observable<any> {
     let errorMessage;
@@ -22,7 +23,7 @@ export class AuthenticationService {
     return of(errorMessage);
   }
 
-  login(username: string): Observable<any> {
+  login(username: string, location: string): Observable<any> {
     return this.httpClient.request(
       'POST',
       'http://www.workshop.tsukiru.com/login',
@@ -32,21 +33,40 @@ export class AuthenticationService {
         }
       }
     ).pipe(
-      catchError(AuthenticationService.handleError)
+      catchError(AuthenticationService.handleError),
+      tap(data => {
+        this.localStorage.setItem('user-id', data?.id);
+        this.localStorage.setItem('location', location);
+      })
     );
   }
 
-  me(id: number, location: string): Observable<any> {
+  me(): Observable<any> {
     return this.httpClient.request(
       'POST',
-      `http://www.workshop.tsukiru.com/me/${ id }`,
+      `http://www.workshop.tsukiru.com/me/
+      ${ this.localStorage.getItem('user-id') }`,
       {
         body: {
-          location
+          location: this.localStorage.getItem('location')
         }
       }
     ).pipe(
-      catchError(AuthenticationService.handleError)
+      catchError(AuthenticationService.handleError),
+      map(data => {
+        return {
+          ...data,
+          location: this.localStorage.getItem('location')
+        }
+      })
     );
+  }
+
+  isAuthenticated(): boolean {
+    return !!this.localStorage.getItem('user-id');
+  }
+
+  logout(): void {
+    this.localStorage.removeItem('user-id');
   }
 }

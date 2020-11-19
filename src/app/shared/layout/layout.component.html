@@ -1,6 +1,9 @@
 <mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="space-between center">
-    <span>Sparetime</span>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" routerLink="/login">
-      <mat-icon>logout</mat-icon>
-    </button>
+  <span>Sparetime</span>
+  <div *ngIf="user$ | async as user">
+    <span>{{ user.firstname + ' ' + user.lastname }}</span>
+  </div>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" (click)="logout()">
+    <mat-icon>logout</mat-icon>
+  </button>
 </mat-toolbar>
