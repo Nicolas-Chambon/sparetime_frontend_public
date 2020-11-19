@@ -18,13 +18,7 @@ export class DashboardComponent implements OnInit {
 
   userEventLoaded: boolean;
 
-  slides = [
-    { image: 'https://farm9.staticflickr.com/8059/28286750501_dcc27b1332_h_d.jpg' },
-    { image: 'https://farm6.staticflickr.com/5812/23394215774_b76cd33a87_h_d.jpg' },
-    { image: 'https://farm6.staticflickr.com/5812/23394215774_b76cd33a87_h_d.jpg' },
-    { image: 'https://farm6.staticflickr.com/5812/23394215774_b76cd33a87_h_d.jpg' },
-    { image: 'https://farm6.staticflickr.com/5812/23394215774_b76cd33a87_h_d.jpg' },
-  ];
+  slides = [];
 
   constructor(
     private authService: AuthenticationService,
@@ -41,9 +35,11 @@ export class DashboardComponent implements OnInit {
 
     this.userEvent$.subscribe((data: any) => {
       this.userEvent = data;
-      this.slides.push({ image: '' });
+      this.slides.push({ image: this.userEvent.picture1 });
+      this.slides.push({ image: this.userEvent.picture2 });
+      this.slides.push({ image: this.userEvent.picture3 });
       this.userEventLoaded = true;
-      console.log(this.userEvent);
+      console.log('user event ', this.userEvent);
     });
   }
 }

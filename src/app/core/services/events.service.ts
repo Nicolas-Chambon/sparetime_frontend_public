@@ -24,11 +24,17 @@ export class EventsService {
   }
 
   userEvent(): Observable<any> {
-    return this.httpClient.post(`http://www.workshop.tsukiru.com/eventUser/
-    ${ this.localStorage.getItem('user-id') }`, {
-      location: this.localStorage.getItem('location'),
+    return this.httpClient.post(`http://www.workshop.tsukiru.com/eventUser/1`, {
+      location: 'Montpellier',
     }).pipe(catchError(EventsService.handleError));
   }
+
+  // userEvent(): Observable<any> {
+  //   return this.httpClient.post(`http://www.workshop.tsukiru.com/eventUser/
+  //   ${ this.localStorage.getItem('user-id') }`, {
+  //     location: this.localStorage.getItem('location'),
+  //   }).pipe(catchError(EventsService.handleError));
+  // }
 
   trendingEvents(): Observable<any> {
     return this.httpClient.post(
