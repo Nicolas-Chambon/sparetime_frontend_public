@@ -7,7 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class EventCardComponent implements OnInit {
   @Input() shortName: string;
-  @Input() shortDesc: string;
+  @Input() companyName: string;
+  @Input() date: string;
 
   @Input() imageUrl: string;
 

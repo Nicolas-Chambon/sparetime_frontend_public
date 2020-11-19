@@ -123,16 +123,17 @@
       <mat-icon class="tab-icon">trending_up</mat-icon>
       Trending events
     </ng-template>
-    <div class="container" style="margin-top: 2em">
+    <div class="container card-container" style="margin-top: 2em">
       <div class="row">
-        <div class="col-6" style="margin-top: 2em">
+        <div *ngFor="let event of trendingEvents" class="col-12 col-lg-6" style="margin-top: 2em">
           <app-event-card
             facebookUrl="lorem"
             instagramUrl="lorem"
             twitterUrl="lorem"
-            shortName="lorem"
-            shortDesc="lorem"
-            imageUrl="https://images.unsplash.com/photo-1525543907410-b2562b6796d6?ixlib=rb-0.3.5&s=9ff8e5e718a6a40cbd0e1471235912f4&auto=format&fit=crop&w=3452&q=80"
+            shortName="{{ event.label }}"
+            companyName="{{ event.company_name }}"
+            date="{{ event.date }}"
+            imageUrl="{{ event.picture1 }}"
           ></app-event-card>
         </div>
       </div>

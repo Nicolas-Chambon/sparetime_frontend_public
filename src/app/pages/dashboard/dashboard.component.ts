@@ -14,8 +14,10 @@ export class DashboardComponent implements OnInit {
   trendingEvents$: Observable<any>;
   userEvent$: Observable<any>;
 
+  trendingEvents: any;
   userEvent: any;
 
+  trendingEventsLoaded: boolean;
   userEventLoaded: boolean;
 
   slides = [];
@@ -40,6 +42,13 @@ export class DashboardComponent implements OnInit {
       this.slides.push({ image: this.userEvent.picture3 });
       this.userEventLoaded = true;
       console.log('user event ', this.userEvent);
+    });
+
+    this.trendingEvents$.subscribe((data: any[]) => {
+      this.trendingEvents = Object.values(data);
+
+      this.trendingEventsLoaded = true;
+      console.log('trendingEvents ', this.trendingEvents);
     });
   }
 }
