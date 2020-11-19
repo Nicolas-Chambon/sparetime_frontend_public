@@ -134,7 +134,13 @@
             companyName="{{ event.company_name }}"
             date="{{ event.date }}"
             imageUrl="{{ event.picture1 }}"
-            event="{{ event }}"
+            duration="{{ event.duration }}"
+            title="{{ event.title }}"
+            type="{{ event.type }}"
+            dateEvent="{{ event.date }}"
+            city="{{ event.city }}"
+            address="{{ event.address }}"
+            [event]="event"
           ></app-event-card>
         </div>
       </div>

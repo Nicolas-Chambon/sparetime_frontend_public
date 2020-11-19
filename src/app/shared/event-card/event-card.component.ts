@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-
+import { Event } from 'src/models/event';
+import { MatDialog } from '@angular/material/dialog';
+import { EventModalComponent } from './event-modal/event-modal.component';
 @Component({
   selector: 'app-event-card',
   templateUrl: './event-card.component.html',
@@ -16,13 +18,34 @@ export class EventCardComponent implements OnInit {
   @Input() twitterUrl: string;
   @Input() instagramUrl: string;
 
-  event: any[] = [];
+  @Input() duration: string;
+  @Input() title: string;
+  @Input() type: string;
+  @Input() dateEvent: string;
+  @Input() city: string;
+  @Input() address: string;
 
-  constructor() {}
+  @Input() event: any;
+
+  constructor(public dialog: MatDialog) {}
 
   ngOnInit(): void {}
 
   onSelectEvent() {
+    console.log(this.event);
+
+    this.dialog.open(EventModalComponent, {
+      maxWidth: '50%',
+      maxHeight: '50%',
+      width: '50%',
+      height: '50%',
+      data: {
+        adress: this.dateEvent,
+        shortName: this.shortName,
+        event: this.event,
+      },
+    });
+
     // this.selectedEvent = event;
     // this.dialog.open(eventDialogComponent, {
     //   maxWidth:'50%',
