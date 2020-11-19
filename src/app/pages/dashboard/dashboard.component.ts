@@ -44,7 +44,7 @@ export class DashboardComponent implements OnInit {
     });
 
     this.trendingEvents$.subscribe((data: any[]) => {
-      this.trendingEvents = Object.values(data);
+      this.trendingEvents = Object.values(data).reverse();
 
       this.trendingEventsLoaded = true;
     });
