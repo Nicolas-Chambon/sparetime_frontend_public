@@ -22,17 +22,10 @@ export class EventsService {
     return of(errorMessage);
   }
 
-  // userEvent(): Observable<any> {
-  //   return this.httpClient.post(`http://www.workshop.tsukiru.com/eventUser/1`, {
-  //     location: this.localStorage.getItem('location'),
-  //   }).pipe(catchError(EventsService.handleError));
-  // }
-
   userEvent(): Observable<any> {
     return this.httpClient
       .post(
-        `http://www.workshop.tsukiru.com/eventUser/
-    ${this.localStorage.getItem('user-id')}`,
+        `http://www.workshop.tsukiru.com/eventUser/${this.localStorage.getItem('user-id')}`,
         {
           location: this.localStorage.getItem('location'),
         },

@@ -16,8 +16,8 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  async loginFacebook(): Promise<void> {
-    this.authService.login('michel_dupont', 'Montpellier').subscribe(async data => {
+  async loginNetwork(username): Promise<void> {
+    this.authService.login(username, 'Montpellier').subscribe(async data => {
       if (data?.id) {
         await this.router.navigate(['/dashboard']);
       }
