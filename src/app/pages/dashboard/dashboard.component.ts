@@ -45,7 +45,7 @@ export class DashboardComponent implements OnInit {
 
     this.trendingEvents$.subscribe((data: any[]) => {
       const trendingEvents = [];
-      const keys = Object.keys(data).sort((a, b) => a-b).reverse();
+      const keys = Object.keys(data).sort((a, b) => Number(a)-Number(b)).reverse();
       for (const key in keys){
         trendingEvents[key] = data[keys[key]];
       }
