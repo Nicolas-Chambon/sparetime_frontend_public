@@ -44,8 +44,13 @@ export class DashboardComponent implements OnInit {
     });
 
     this.trendingEvents$.subscribe((data: any[]) => {
-      this.trendingEvents = Object.values(data).reverse();
+      const trendingEvents = [];
+      const keys = Object.keys(data).sort((a, b) => a-b).reverse();
+      for (const key in keys){
+        trendingEvents[key] = data[keys[key]];
+      }
 
+      this.trendingEvents = trendingEvents;
       this.trendingEventsLoaded = true;
     });
   }
